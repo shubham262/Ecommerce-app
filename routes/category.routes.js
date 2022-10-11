@@ -4,6 +4,10 @@ const AuthenticationMiddleWare = require('../middlewares/authentication.validato
 
 const routes = (app) =>{
     /* to get all the categories */
+    app.get('/',function(req,res){
+    res.send("Welcome to our Ecommerce Project, Please Use various apis,in Postman to test this project. ")
+    })
+    
     app.get('/ecomm/api/v1/categories', CategoryController.getCategories);
 
     /* to create a new category */
